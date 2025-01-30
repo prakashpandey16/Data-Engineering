@@ -1,0 +1,1 @@
+print(y) # give error bcz it is not global variable

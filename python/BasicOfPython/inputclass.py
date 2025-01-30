@@ -1,0 +1,10 @@
+Name = input("Enter name:") # inputclass  always take input as string we have to type cast it according to our needs
+print("Welcome",Name)
+print(type(Name))
+age = int(input("Enter age:"))
+print("Enterrd age:",age)
+marks = float(input("Enter marks:"))
+print("Entered marks:")
+print(type(Name))
+print(type(age))
+print(type(marks))
