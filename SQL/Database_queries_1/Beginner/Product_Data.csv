@@ -1,0 +1,71 @@
+product_id,name,category,price
+1,Laptop,Electronics,999.99
+2,Smartphone,Electronics,799.99
+3,Tablet,Electronics,NULL
+4,Headphones,Electronics,149.99
+5,NULL,Furniture,499.99
+6,Chair,NULL,199.99
+7,Sofa,Furniture,NULL
+8,Desk,Furniture,299.99
+9,Lamp,Furniture,NULL
+10,Bookcase,Furniture,149.99
+11,Refrigerator,Appliances,899.99
+12,Oven,Appliances,NULL
+13,Microwave,Appliances,199.99
+14,Blender,Appliances,NULL
+15,Toaster,Appliances,49.99
+16,NULL,Clothing,79.99
+17,T-shirt,NULL,29.99
+18,Jeans,Clothing,NULL
+19,Jacket,Clothing,129.99
+20,Shoes,Clothing,NULL
+21,Hat,Clothing,19.99
+22,Watch,Accessories,199.99
+23,Sunglasses,Accessories,NULL
+24,Belt,Accessories,49.99
+25,NULL,Accessories,24.99
+26,Scarf,Accessories,NULL
+27,Necklace,Jewelry,299.99
+28,Bracelet,Jewelry,NULL
+29,Ring,Jewelry,199.99
+30,Earrings,Jewelry,NULL
+31,Brooch,Jewelry,99.99
+32,NULL,Toys,49.99
+33,"Action Figure",NULL,19.99
+34,Doll,Toys,NULL
+35,Puzzle,Toys,24.99
+36,"Board Game",Toys,NULL
+37,"RC Car",Toys,59.99
+38,Bicycle,Sports,299.99
+39,NULL,Sports,149.99
+40,"Soccer Ball",NULL,29.99
+41,Basketball,Sports,NULL
+42,"Tennis Racket",Sports,79.99
+43,"Yoga Mat",Sports,NULL
+44,Helmet,Safety,49.99
+45,Gloves,Safety,NULL
+46,"Knee Pads",Safety,24.99
+47,NULL,Safety,19.99
+48,"First Aid Kit",Safety,NULL
+49,"Fire Extinguisher",Safety,39.99
+50,"Water Bottle",Fitness,19.99
+51,"Fitness Tracker",NULL,149.99
+52,"Jump Rope",Fitness,NULL
+53,NULL,Fitness,29.99
+54,Dumbbells,Fitness,NULL
+55,"Yoga Block",Fitness,24.99
+56,"Hair Dryer",Beauty,49.99
+57,NULL,Beauty,29.99
+58,"Makeup Kit",NULL,59.99
+59,Perfume,Beauty,NULL
+60,Shampoo,Beauty,14.99
+61,NULL,Books,19.99
+62,Novel,NULL,9.99
+63,Textbook,Books,NULL
+64,Magazine,Books,4.99
+65,Notebook,Books,NULL
+66,Sketchbook,Books,14.99
+67,Pen,NULL,2.99
+68,Pencil,Stationery,NULL
+69,Eraser,Stationery,1.99
+70,NULL,Stationery,0.99

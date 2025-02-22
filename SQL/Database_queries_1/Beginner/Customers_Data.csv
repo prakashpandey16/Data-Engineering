@@ -1,0 +1,71 @@
+id,name,email,city,sign_up
+1,"Alice Johnson",alice.johnson@example.com,"New York",2022-01-15
+2,"Bob Smith",bob.smith@example.com,NULL,2023-02-20
+3,"Catherine Brown",catherine.brown@example.com,Chicago,2021-03-10
+4,"David Jones",NULL,Houston,2023-04-25
+5,"Emma Wilson",emma.wilson@example.com,NULL,2022-05-30
+6,"Frank White",NULL,Philadelphia,2021-06-15
+7,NULL,grace.green@example.com,"San Antonio",2023-07-20
+8,"Henry Harris",henry.harris@example.com,"San Diego",NULL
+9,"Isabella Clark",NULL,Dallas,2021-09-30
+10,"Jack Lewis",jack.lewis@example.com,NULL,2023-10-15
+11,"Karen Walker",karen.walker@example.com,Austin,2022-11-20
+12,"Liam Hall",NULL,Jacksonville,2021-12-25
+13,"Mia Young",mia.young@example.com,"Fort Worth",NULL
+14,"Nathan Allen",nathan.allen@example.com,NULL,2022-02-15
+15,NULL,olivia.king@example.com,Charlotte,2021-03-20
+16,"Paul Scott",NULL,"San Francisco",2023-04-25
+17,"Quinn Wright",quinn.wright@example.com,Indianapolis,NULL
+18,"Rachel Turner",NULL,Seattle,2021-06-15
+19,"Samuel Adams",samuel.adams@example.com,NULL,2023-07-20
+20,"Tina Baker",tina.baker@example.com,Washington,NULL
+21,"Ursula Parker",NULL,Boston,2021-09-30
+22,"Victor Price",victor.price@example.com,"El Paso",NULL
+23,"Wendy Sanders",NULL,Nashville,2022-11-20
+24,"Xander Reed",xander.reed@example.com,NULL,2021-12-25
+25,"Yvonne Cruz",yvonne.cruz@example.com,NULL,2023-01-30
+26,"Zachary Bell",NULL,"Las Vegas",2022-02-15
+27,"Anna Mitchell",anna.mitchell@example.com,Louisville,NULL
+28,"Blake Ross",NULL,Baltimore,2023-04-25
+29,"Claire Coleman",claire.coleman@example.com,NULL,2022-05-30
+30,"Daniel Patterson",NULL,Albuquerque,2021-06-15
+31,"Ella Hughes",ella.hughes@example.com,NULL,2023-07-20
+32,"Felix Simmons",NULL,Fresno,2022-08-25
+33,"Gina Foster",gina.foster@example.com,NULL,2021-09-30
+34,"Harry Richards",NULL,"Kansas City",2023-10-15
+35,"Ivy Patterson",ivy.patterson@example.com,NULL,2022-11-20
+36,"Jake Bailey",NULL,Atlanta,2021-12-25
+37,"Kara Morales",kara.morales@example.com,NULL,2023-01-30
+38,"Lance Fisher",NULL,"Colorado Springs",2022-02-15
+39,"Mona Hawkins",mona.hawkins@example.com,NULL,2021-03-20
+40,"Nina Carlson",NULL,Miami,2023-04-25
+41,"Oscar Ellis",oscar.ellis@example.com,NULL,2022-05-30
+42,"Patricia Ward",NULL,Oakland,2021-06-15
+43,"Quentin Brooks",quentin.brooks@example.com,NULL,2023-07-20
+44,"Rita Cook",NULL,Tulsa,2022-08-25
+45,"Steven Hayes",steven.hayes@example.com,NULL,2021-09-30
+46,"Tessa Webb",NULL,"New Orleans",2023-10-15
+47,"Ulysses Scott",ulysses.scott@example.com,NULL,2022-11-20
+48,"Victoria Powell",NULL,Cleveland,2021-12-25
+49,"Walter Torres",walter.torres@example.com,NULL,2023-01-30
+50,"Xenia Spencer",NULL,Tampa,2022-02-15
+51,"Yusuf Anderson",yusuf.anderson@example.com,NULL,2021-03-20
+52,"Zoe Cunningham",NULL,Anaheim,2023-04-25
+53,"Amber Olson",amber.olson@example.com,NULL,2022-05-30
+54,"Bradley Howell",NULL,"St. Louis",2021-06-15
+55,"Camila Webster",NULL,Riverside,2023-07-20
+56,"Derek Sanchez",NULL,"Corpus Christi",2022-08-25
+57,"Eve Burton",NULL,Lexington,2021-09-30
+58,"Finn Barrett",NULL,Henderson,2023-10-15
+59,"Gwen Shaw",gwen.shaw@example.com,NULL,2022-11-20
+60,"Howard Richardson",NULL,"Saint Paul",2021-12-25
+61,"Isabel Kim",NULL,Cincinnati,2023-01-30
+62,"Jacob Vasquez",jacob.vasquez@example.com,NULL,2022-02-15
+63,"Kelsey Hunt",NULL,Greensboro,2021-03-20
+64,"Logan Greene",logan.greene@example.com,NULL,2023-04-25
+65,"Molly Wells",NULL,Durham,2022-05-30
+66,"Noah Pearson",noah.pearson@example.com,NULL,2021-06-15
+67,"Owen Meyer",NULL,"Chula Vista",2023-07-20
+68,"Piper Aguilar",piper.aguilar@example.com,NULL,2022-08-25
+69,"Quincy Bishop",NULL,Chandler,2021-09-30
+70,"Ruby Lowe",NULL,Madison,2023-10-15
