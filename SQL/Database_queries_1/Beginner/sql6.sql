@@ -868,3 +868,17 @@ SELECT AVG(marks)
 FROM student);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
