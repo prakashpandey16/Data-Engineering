@@ -466,4 +466,27 @@ SELECT DATE_FORMAT(CURRENT_DATE(),'%M %d, %Y') AS New_date_format;
 -- format as formatted_date.
 
 SELECT DATE_FORMAT(CURRENT_DATE(),'%W,%M %d,%Y') AS date_formated;
+
+
+-- 11)Change the format of current date into this (YYYY/MM/DD) format.
+
+SELECT DATE_FORMAT(CURRENT_DATE(),'%Y %M %D') AS new_data_format; 
+
+-- 12)Display current time in 12-hour format with AM/PM inside
+-- parenthesis (hh:mi:ss (AM/PM)) as formatted_time. Example -
+-- 07:53:46 (PM).
+
+
+SELECT DATE_FORMAT(CURRENT_TIME(),'%h:%i:%s (%p)') AS formatted_time;
  
+ 
+--  13)Display current time in 24-hour format without seconds (HH:MM) as
+-- formatted_time
+
+SELECT DATE_FORMAT(CURRENT_TIME(),'%H:%i') AS formatted_time;
+
+-- 14)Display the current timestamp with the day of the week, month, day,
+-- year, and time in the format Day, Month DD, YYYY HH:MM:SS as
+-- formatted_timestamp. Example- May 26, 2023 19:58:19 PM
+
+SELECT DATE_FORMAT(CURRENT_TIMESTAMP(),'%M %d,%Y %H:%i:%s (%p)') AS formatted_timestamp; 
