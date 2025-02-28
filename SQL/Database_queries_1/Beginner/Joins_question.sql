@@ -144,7 +144,9 @@ INNER JOIN categories c ON p.category_id = c.category_id
 INNER JOIN suppliers s ON p.supplier_id = s.supplier_id;
 
 
-
+-- SELECT COUNT(*) FROM employees CROSS JOIN departments;
+-- SELECT COUNT(*) FROM employees CROSS JOIN departments CROSS JOIN products;
+-- it is same as cartesian product of two sets 
 
     
 	
