@@ -148,5 +148,21 @@ INNER JOIN suppliers s ON p.supplier_id = s.supplier_id;
 -- SELECT COUNT(*) FROM employees CROSS JOIN departments CROSS JOIN products;
 -- it is same as cartesian product of two sets 
 
+-- 11. Find customers who have placed orders in every available month.
+
+SELECT * FROM customer;
+SELECT * FROM orders;
+
+SELECT 
+	c.customer_id AS customer_id,
+    c.customer_name AS customer_name,
+    o.order_id AS order_id,
+    o.order_total AS order_price,
+    o.order_date AS order_date
+FROM customer AS c
+INNER JOIN orders AS o
+ON o.customer_id = c.customer_id
+GROUP BY o.order_date;
+
     
 	

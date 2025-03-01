@@ -273,3 +273,152 @@ SELECT
 	supplier_name 
 FROM supplier 
 WHERE rating > ANY(SELECT rating FROM supplier WHERE country = 'USA');
+
+
+-- 11. Retrieve employees who earn more than all employees in the 'HR' department
+SELECT * FROM employee;
+SELECT * FROM department;
+
+-- SELECT
+-- 	e.emp_id AS employee_id,
+--     e.emp_name AS employee_name,
+--     d.dept_id AS department_id,
+--     d.dept_name AS department_name,
+--     d.location AS department_location
+-- FROM employee AS e
+-- INNER JOIN department AS d
+-- ON e.dept_id = d.dept_id ;
+
+SELECT * FROM
+employee 
+WHERE salary > ALL(
+SELECT e.salary 
+FROM employee AS e
+INNER JOIN department AS d
+ON e.dept_id = d.dept_id
+WHERE dept_name = 'HR'
+);
+
+--  when  we want department column name also
+SELECT 
+    e.emp_id AS employee_id,
+    e.emp_name AS employee_name,
+    e.salary AS employee_salary,
+    d.dept_id AS department_id,
+    d.dept_name AS department_name,
+    d.location AS department_location
+FROM employee AS e
+INNER JOIN department AS d 
+ON e.dept_id = d.dept_id
+WHERE e.salary > ALL (
+    SELECT e2.salary 
+    FROM employee AS e2
+    INNER JOIN department AS d2 
+    ON e2.dept_id = d2.dept_id
+    WHERE d2.dept_name = 'HR'
+);
+
+-- 12. List products that are priced higher than all products in the 'Clothing' category.
+SELECT * FROM product;
+    
+SELECT * 
+FROM product
+WHERE price > ALL(SELECT price FROM product WHERE category = 'Clothing');
+
+
+-- 13. Find students whose marks are higher than all students from section 'B'.
+
+SELECT * FROM student;
+
+SELECT *
+FROM student 
+WHERE marks > ALL(SELECT marks FROM student WHERE section = 'B');
+
+
+-- 14. Get orders that have a total price greater than all orders placed by customer 'John
+-- Doe'
+
+SELECT * FROM orders;
+SELECT * FROM customer;
+
+
+SELECT
+	o.order_id AS order_id,
+    c.customer_id AS customer_id,
+    c.customer_name AS customer_name,
+    o.order_total AS total_price
+FROM orders AS o
+INNER JOIN customer AS c
+ON o.customer_id = c.customer_id
+WHERE o.order_total > ALL
+( SELECT o2.order_total
+  FROM orders AS o2
+  INNER JOIN customer AS c2
+  ON o2.customer_id = c2.customer_id
+  WHERE c2.customer_name = 'John Doe'
+);
+
+
+-- 15. Retrieve suppliers whose ratings are higher than all suppliers from 'India'.
+
+SELECT * FROM supplier;
+
+
+SELECT * 
+FROM supplier 
+WHERE rating > ALL
+(SELECT rating FROM supplier WHERE country = 'India');
+
+
+-- 16. Retrieve customers who have placed at least one order.
+
+
+SELECT * FROM customer;
+SELECT * FROM orders;
+
+SELECT * 
+FROM customer AS c
+WHERE EXISTS
+(SELECT * FROM
+orders AS o
+WHERE c.customer_id = o.customer_id);
+
+-- 17. Find employees who have subordinates reporting to them.
+
+SELECT * FROM employee;
+
+SELECT *
+FROM employee AS e1
+WHERE EXISTS 
+(SELECT 1 FROM employee AS e2 WHERE e2.mangager_id = e1.emp_id);
+
+
+-- 18. List products that have been ordered at least once.
+SELECT * FROM product;
+SELECT * FROM orders;
+
+SELECT * 
+FROM product AS p
+WHERE EXISTS 
+(SELECT 1 FROM orders AS o WHERE o.prod_id = p.prod_id);
+
+
+-- 19. Get students who have enrolled in at least one course.
+SELECT * FROM student;
+
+SELECT *
+FROM student AS s
+WHERE EXISTS
+(SELECT 1
+	FROM enrollement AS e
+    WHERE c.stu_id = e.stud_id);
+
+
+-- 20. Display departments that have at least one employee.
+
+SELECT *
+FROM department AS d
+WHERE EXISTS 
+(SELECT 1 
+	FROM employee AS e
+    WHERE e.dept_id = d.dept_id);
