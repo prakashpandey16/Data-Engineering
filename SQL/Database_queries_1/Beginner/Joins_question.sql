@@ -165,4 +165,92 @@ ON o.customer_id = c.customer_id
 GROUP BY o.order_date;
 
     
-	
+-- 11. Find customers who have placed orders in every available month.
+
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+SELECT 
+	c.customer_name AS customer_name,
+    c.customer_id AS customer_id
+FROM customers AS c
+INNER JOIN orders AS o
+ON c.customer_id = o.customer_id
+GROUP BY customer_id,customer_name
+HAVING COUNT(DISTINCT MONTH(o.order_date)) = (SELECT COUNT(DISTINCT MONTH(order_date)) FROM orders);
+
+
+
+-- 12. Retrieve a list of employees and their salaries, including those who don’t belong to
+-- any department, and departments with no employees.
+
+SELECT * FROM employees;
+SELECT * FROM departments;
+
+(SELECT
+    e.emp_name AS employee_name,
+    e.salary AS employee_salary,
+    d.dept_name AS department_name
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.dept_id = d.dept_id)
+
+UNION
+
+(SELECT
+    NULL AS employee_name,
+    NULL AS employee_salary,
+    d.dept_name AS department_name
+FROM departments AS d
+LEFT JOIN employees AS e
+ON d.dept_id = e.dept_id
+WHERE e.emp_id IS NULL);
+
+-- 13. Find the total sales for each category along with category names
+
+SELECT * FROM categories;
+SELECT * FROM orders;
+
+SELECT 
+	c.category_name AS category_name,
+    COALESCE(SUM(o.total_amount),0) AS total_sales
+FROM categories AS c
+LEFT JOIN  orders AS o
+ON c.category_id = o.category_id
+GROUP BY category_name
+ORDER BY total_sales DESC;
+
+-- 14. Retrieve the employees who have the highest salary in their department.
+
+SELECT  * FROM employees;
+SELECT * FROM departments;
+
+SELECT 
+    e.emp_name AS employee_name,
+    d.dept_name AS department_name,
+    e.salary AS max_employee_salary
+FROM employees AS e
+JOIN departments AS d
+ON e.dept_id = d.dept_id 
+WHERE e.salary = (
+    SELECT MAX(e2.salary) 
+    FROM employees AS e2 
+    WHERE e2.dept_id = e.dept_id
+);
+
+
+-- 15. Get customers who have never ordered, along with customers who placed their last
+-- order more than a year ago.
+
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+
+
+
+
+
+
+
+
+
