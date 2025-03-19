@@ -449,6 +449,55 @@ FROM customers AS c
 INNER JOIN orders AS o
 ON c.id = o.cust_id
 GROUP BY c.id, c.cust_name;
+-- SELECT * FROM  customers;
+-- SELECT * FROM  orders;
+-- SELECT * FROM product;
+-- SELECT * FROM OrderDetails;
+-- SELECT * FROM Employee;
+-- SELECT * FROM Student;
+-- SELECT * FROM Attendance;
+-- SELECT * FROM Salary;
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+-- 56. Update the salary of all employees in the 'IT' department by 10%.
+SELECT *
+FROM Employee;
+
+UPDATE Employee 
+set salary = salary + (salary*10)/100
+WHERE department = "IT";
+
+-- 57. Change all NULL phone numbers to 'Not Provided'
+UPDATE Employee 
+SET phone_number = 'Not Provided'
+WHERE phone_number IS NULL;
+
+-- 58. Modify the column 'salary' from INT to DECIMAL(10,2).
+
+ALTER TABLE Employee
+ MODIFY COLUMN salary DECIMAL(10,2);
+ 
+--  59. Rename the column 'dob' to 'birth_date'.
+ALTER TABLE Employee 
+CHANGE COLUMN dob  birth_date DATE;
+
+-- 60. Add a new column 'last_updated' with a default timestamp.
+ALTER TABLE Employee
+ADD COLUMN last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
